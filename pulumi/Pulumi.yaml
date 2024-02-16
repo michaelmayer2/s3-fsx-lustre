@@ -1,0 +1,25 @@
+name: rsw-ha
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Deploy Posit Workbench in HA/LB configuration 
+
+config:
+  region:
+    type: string
+    description: AWS region to use
+    default: eu-west-1 
+  email:
+    type: string
+    description: EMail address
+    default: tbd@tbc.com
+  ServerInstanceType:
+    type: string
+    description: AWS instance type for AD jumphost EC2 instance 
+    default: t3.medium
+  ami:
+    type: string
+    description: A valid AMI used to deploy on AD jumphost (must be Ubuntu 20.04 LTS)
+    default: ami-0d86ecafd19013f31 
+
